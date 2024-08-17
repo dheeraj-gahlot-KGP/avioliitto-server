@@ -1,17 +1,19 @@
 
 import express, { Request,Response, NextFunction } from 'express';
 
-import userRoutes from './routes/user.js'
-import productRoutes from './routes/product.js'
-import orderRoutes from './routes/order.js'
-import paymentRoutes from './routes/payment.js'
-import dashboardRoutes from './routes/stats.js'
+import userRoutes from './User/userRoutes.js'
+ 
+import productRoutes from './Product/productRoutes.js'
+import orderRoutes from './Order/orderRoutes.js'
+import paymentRoutes from './Payment/paymentRoutes.js'
+import dashboardRoutes from './DashBoardStats/dashboardRoutes.js'
 import { connectDB } from './utils/features.js';
 import { errorMiddleware } from './middlewares/error.js';
 import NodeCache from 'node-cache';
 import { config } from 'dotenv';
 import morgan from 'morgan';
 import Stripe from 'stripe';
+
 import cors from 'cors';
 
 
@@ -30,6 +32,7 @@ const app = express();
 app.use(express.json());
 app.use(morgan("dev"));
 app.use(cors());
+
 
 app.use("/api/v1/user" , userRoutes);
 app.use("/api/v1/product", productRoutes);

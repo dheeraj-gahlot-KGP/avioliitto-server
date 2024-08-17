@@ -2,7 +2,7 @@ import express from "express";
  
 import { adminOnly } from "../middlewares/auth.js";
 import { singleUpload } from "../middlewares/multer.js";
-import { newProduct , getLatestProduct,getAllCategories, getAdminProducts, getSingleProduct, updateProduct, deleteProduct,getAllProducts } from "../controllers/product.js";
+import { newProduct , getLatestProduct,getAllCategories, getAdminProducts, getSingleProduct, updateProduct, deleteProduct,getAllProducts } from "./controller.js";
  
 const app = express.Router();
 

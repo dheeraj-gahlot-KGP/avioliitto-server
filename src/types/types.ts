@@ -5,9 +5,14 @@ export interface NewUserRequestBody {
     _id: string;
     name: string;
     email: string;
-    photo: string;
+    password:string;
     gender: string;
     dob: Date;
+}
+
+export interface UserLoginRequestBody {
+    email: string;
+    password:string;
 }
 
 export interface LoginUserRequestBody {

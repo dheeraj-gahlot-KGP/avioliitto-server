@@ -1,7 +1,7 @@
 import express from "express";
  
 import { adminOnly } from "../middlewares/auth.js";
-import { getBarCharts, getDashboardStats, getLineCharts, getPieCharts } from "../controllers/stats.js";
+import { getBarCharts, getDashboardStats, getLineCharts, getPieCharts } from "./controller.js";
  
 const app = express.Router();
 

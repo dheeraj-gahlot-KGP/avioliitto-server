@@ -1,9 +1,8 @@
 import { myCache } from "../app.js";
 import { TryCatch } from "../middlewares/error.js";
-import { Coupon } from "../model/coupon.js";
-import { Order } from "../model/order.js";
-import { Product } from "../model/product.js";
-import { User } from "../model/user.js";
+import { Order } from "../Order/model.js";
+import { Product } from "../Product/model.js";
+import { User } from "../User/model.js";
 import { calculatePercentage, getChartData, getInventories } from "../utils/features.js";
 import ErrorHandler from "../utils/utility-class.js";
 

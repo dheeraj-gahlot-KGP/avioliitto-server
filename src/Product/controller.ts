@@ -1,7 +1,7 @@
 
 import { NextFunction, Request, Response } from "express"
 
-import { Product } from "../model/product.js";
+import { Product } from "./model.js";
 import { BaseQuery, NewProductRequestBody, SearchRequestQuery } from "../types/types.js";
 import ErrorHandler from "../utils/utility-class.js";
 import { TryCatch } from "../middlewares/error.js";

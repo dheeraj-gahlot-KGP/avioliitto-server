@@ -8,7 +8,7 @@ import {faker} from '@faker-js/faker'
 import { count } from "console";
 import { myCache } from "../app.js";
 import { invalidatesCache, reduceStock } from "../utils/features.js";
-import { Order } from "../model/order.js";
+import { Order } from "./model.js";
 
 
 export const newOrder = TryCatch(async (req:Request<{},{},NewOrderRequestBody>, res, next) => {
